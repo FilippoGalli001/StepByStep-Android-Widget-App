@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppWidget"
+        tools:targetApi="31">
+
+
+        <!-- Entry point dei fragment -->
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activty dettaglio sessione registrata -->
+        <activity
+            android:name=".activities.DetailActivity"
+            android:exported="false" />
+
+        <!-- Activity impostazioni widget -->
+        <activity
+            android:name=".activities.RunWidgetConfigureActivity"
+            android:exported="false" />
+
+        <!-- Activity impostazioni GraphWidget -->
+        <activity
+            android:name=".activities.GraphWidgetConfigureActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity impostazioni ListWidget -->
+        <activity
+            android:name=".activities.ListWidgetConfigureActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <!-- Widget riepilogo -->
+        <receiver
+            android:name=".widgets.RunWidget"
+            android:exported="false"
+            android:label="@string/new_appwidget_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_SIZE_CHANGED" />
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+                <action android:name="location-update" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+
+        <!-- Widget a lista -->
+        <receiver
+            android:name=".widgets.ListWidget"
+            android:exported="false"
+            android:label="@string/list_widget_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="database-updated" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/list_widget_info" />
+        </receiver>
+
+        <!-- Widget grafico-->
+        <receiver
+            android:name=".widgets.GraphWidget"
+            android:exported="false"
+            android:label="@string/graph_widget_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="database-updated" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/graph_widget_info" />
+        </receiver>
+
+        <!-- Servizio registrazione localizzazione utente -->
+        <service
+            android:name=".LocationService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+
+        <service
+            android:name=".ListWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS">
+            <intent-filter>
+                <action android:name="android.widget.RemoteViewsService" />
+            </intent-filter>
+        </service>
+
+        <!-- Fonts esterni -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>

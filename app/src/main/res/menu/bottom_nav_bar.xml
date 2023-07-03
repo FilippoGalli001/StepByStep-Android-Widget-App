@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Menù utilizzato nella bottom navigation view -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Ogni item ha un id. Se l'id coincide con l'id di un fragment, è collegato automaticamente
+    (tramite il framework Navigation) al fragment corrispondente nel navigation graph-->
+    
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24" />
+
+    <item
+        android:id="@+id/run"
+        android:title="Run"
+        android:icon="@drawable/run" />
+
+    <item
+        android:id="@+id/stats"
+        android:title="Stats"
+        android:icon="@drawable/monitor" />
+
+    <item
+        android:id="@+id/config"
+        android:title="Settings"
+        android:icon="@drawable/settings" />
+
+</menu>

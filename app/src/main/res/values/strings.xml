@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">StepByStep</string>
+
+    <!-- RunWidget -->
+    <string name="new_appwidget_label">RunWidget</string>
+    <string name="new_appwidget_description">Imposta una nuova corsa e visualizzane i parametri</string>
+
+    <!--ListWidget -->
+    <string name="list_widget_label">ListWidget</string>
+    <string name="list_widget_description">Visualizza tutte le sessioni di corsa</string>
+
+    <!-- GraphWidget -->
+    <string name="graph_widget_label">Grafico</string>
+    <string name="graph_widget_description">Visualizza un grafico delle sessioni di corsa</string>
+    <string name="graph_widget_configure_textview">Scegli il valore di interesse</string>
+    <string name="graph_widget_save_button">Salva</string>
+    <string-array name="graph_widget_configure_options">
+        <item>Distanza</item>
+        <item>Durata</item>
+        <item>Calorie</item>
+    </string-array>
+
+    <string-array name="list_widget_configure_options">
+        <item>Giorno</item>
+        <item>Settimana</item>
+        <item>Mese</item>
+    </string-array>
+
+    <string-array name="gender_configure_options">
+        <item>M</item>
+        <item>F</item>
+    </string-array>
+
+
+    <!--Fragment Run -->
+    <string name="run_fragment_calories_label">Calorie bruciate</string>
+    <string name="run_fragment_time_label">Tempo trascorso</string>
+    <string name="run_fragment_distance_label">Distanza percorsa (km)</string>
+    <string name="run_fragment_rate_default_value">0:00</string>
+    <string name="run_fragment_rate_label">Minuti a km</string>
+    <string name="run_fragment_kcal_default_value">000</string>
+    <string name="run_fragment_start_button_label">Avvia corsa</string>
+    <string name="run_fragment_stop_button_label">Termina corsa</string>
+    <string name="run_fragment_distance_default_value">0.00</string>
+
+    <string-array name="units">
+        <item>km/h</item>
+        <item>m/s</item>
+        <item>Mph</item>
+        <item>boh</item>
+    </string-array>
+
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="graphWidgetTitle">Grafico</string>
+    <string name="filter_session_title">Seleziona un valore su cui filtrare le sessioni</string>
+    <string name="list_view_save_button">Salva</string>
+    <string name="past_week_description">Bottone per visualizzare la settimana passata</string>
+    <string name="next_week_description">Bottone per visualizzare la prossima settimana</string>
+    <string name="stats_fragment_hint_text">Clicca sugli elementi per i dettagli</string>
+
+
+</resources>

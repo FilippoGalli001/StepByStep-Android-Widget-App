@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:orientation="vertical"
+    android:theme="@style/Theme.Material3.DynamicColors.DayNight">
+
+    <TextView
+        android:id="@+id/tv_sessionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="00:00"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/innerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/startServiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:text="@string/run_fragment_start_button_label" />
+
+        <Button
+            android:id="@+id/stopServiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:text="Ferma corsa" />
+
+
+        <!-- Add StackView -->
+
+    </LinearLayout>
+</LinearLayout>
+
+

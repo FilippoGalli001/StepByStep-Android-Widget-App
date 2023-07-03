@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Setup">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:id="@+id/constraintLayout"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:id="@+id/datiText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:text="Impostazioni"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/infoCard"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:cardElevation="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/datiText">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nome_utente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Nome"
+                        app:endIconMode="clear_text"
+                        app:startIconDrawable="@drawable/person"
+                        app:boxBackgroundMode="outline"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="18sp"
+                        android:textStyle="bold">
+                    
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="15"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/peso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Peso"
+                        app:endIconMode="clear_text"
+                        app:startIconDrawable="@drawable/icons8_bilancia_24"
+                        app:boxBackgroundMode="outline"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="18sp"
+                        android:textStyle="bold">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:layout_weight="1"
+                            android:maxLength="9"
+                            android:fontFamily="@font/poppins_semibold"/>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/eta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Eta'"
+                        app:hintAnimationEnabled="true"
+                        app:endIconMode="clear_text"
+                        app:startIconDrawable="@drawable/icons8_calendario_24"
+                        app:boxBackgroundMode="outline"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="18sp"
+                        android:textStyle="bold">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_semibold"/>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+
+                        <Spinner
+                            android:id="@+id/gender_Spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+
+                            />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/kcalTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Target giornaliero"
+                        app:endIconMode="clear_text"
+                        app:startIconDrawable="@drawable/icons8_corsa_24"
+                        app:boxBackgroundMode="outline"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="18sp"
+                        android:textStyle="bold">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="numberDecimal"
+                            android:maxLength="9"
+                            android:fontFamily="@font/poppins_semibold"/>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Registra dati"
+            android:backgroundTint="@color/lavender"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoCard"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+
+</ScrollView>

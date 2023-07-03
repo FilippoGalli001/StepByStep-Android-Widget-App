@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/home">
+
+    <!-- Fragment appartenenti al grafo di navigazione della main activity. Ogni fragment ha un id
+    che viene utilizzato per recuperare il fragment desiderato quando si preme uno degli elementi
+    dalla bottom navigation bar-->
+
+    <fragment
+        android:id="@+id/home"
+        android:name="it.project.appwidget.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/run"
+        android:name="it.project.appwidget.fragments.Run"
+        android:label="fragment_run"
+        tools:layout="@layout/fragment_run" />
+
+    <fragment
+        android:id="@+id/stats"
+        android:name="it.project.appwidget.fragments.Stats"
+        android:label="fragment_stats"
+        tools:layout="@layout/fragment_stats" />
+
+    <fragment
+        android:id="@+id/config"
+        android:name="it.project.appwidget.fragments.Config"
+        android:label="fragment_config"
+        tools:layout="@layout/fragment_config" />
+
+    <fragment
+        android:id="@+id/setup"
+        android:name="it.project.appwidget.fragments.Setup"
+        android:label="fragment_setup"
+        tools:layout="@layout/fragment_setup" />
+</navigation>

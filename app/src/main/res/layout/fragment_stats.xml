@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".fragments.Stats">
+
+    <it.project.appwidget.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="4" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stats_fragment_hint_text"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        tools:text="Clicca sugli elementi per i dettagli" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="5"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/tracksession_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/pastWeekButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:src="@drawable/icons8_frecciasinistra"
+            android:contentDescription="@string/past_week_description" />
+
+        <Button
+            android:id="@+id/generateButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="@color/lavender"
+            android:maxLines="1"
+            android:text="Corrente"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/nextWeekButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:src="@drawable/icons8_freccia_destra_24"
+            android:contentDescription="@string/next_week_description" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cb_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostra velocità"/>
+
+        <CheckBox
+            android:id="@+id/cb_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostra posizione"/>
+
+        <CheckBox
+            android:id="@+id/cb_calories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostra calorie"/>
+
+        <CheckBox
+            android:id="@+id/cb_session_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostra distanza sessione"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salva"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

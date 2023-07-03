@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="it.project.appwidget.activities.GraphWidgetConfigureActivity"
+    android:description="@string/graph_widget_description"
+    android:initialKeyguardLayout="@layout/graph_widget"
+    android:initialLayout="@layout/graph_widget"
+    android:previewImage="@drawable/graph_preview_image"
+    android:resizeMode="horizontal|vertical"
+    android:targetCellWidth="3"
+    android:targetCellHeight="2"
+    android:updatePeriodMillis="86400000"
+    android:widgetCategory="home_screen"
+    android:widgetFeatures="reconfigurable | configuration_optional"/>
